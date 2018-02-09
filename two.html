@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Two</title>
+		<link rel="stylesheet" type="text/css" href="css/two.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<style type="text/css">
+			   body{
+		        perspective: 1000px;
+		        background: black;
+		        
+		        -webkit-transform-style: preserve-3d;
+		        -moz-transform-style: preserve-3d;
+		        -ms-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+		        		        
+		      }
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="imgs">
+				<img class="ditu" src="img/diqiu/1.jpg"/>
+			</div>
+			<div id="word_1">
+				<img class="fadeInRight" src="img/diqiu/ww.png"/>
+			</div>
+			<div id="word_2">
+				<img class="fadeInLeft" src="img/diqiu/www.png"/>
+			</div>
+			<div id="slide">
+				<img class="fadeInUp" src="img/tong/slide.png"/>
+				<img class="fadeInUp" src="img/tong/slide.png"/>
+			</div>
+			<div id="music">
+				<img id="plays" src="img/tong/music.png"/>
+				<img id="paused" src="img/tong/musicoff.png"/>
+			</div>
+			<audio id="gameMusic" src="musics/Shiftone_0.74.mp3"></audio>
+		</div>
+	</body>
+	<script src="js/touch-0.2.14.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tong.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var slide = document.getElementById("slide"); 
+		touch.on('#all', 'swipeup', function(ev){
+		   window.location.href = "third.html";
+		});
+		touch.on('#all', 'swipedown', function(ev){
+		   window.location.href = "shou.html";
+		});	
+		var imgs = document.getElementById("imgs");
+		var imgss = imgs.getElementsByClassName("ditu")[0];
+			var i =0;	
+		setInterval(function  () {
+				i++;
+				imgss.src = 'img/diqiu/'+i+'.jpg';
+				if (i==47) {
+					i=1;
+				}
+		},50);
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#all{
+	width: 320px;
+	height: 568px;
+	background-color: black;
+	position: relative;
+}
+#center img:nth-child(n){
+	position: absolute;
+}
+#center img:nth-child(1){
+    top: 30px;
+    left: 80px;
+	width: 41px;
+	animation-timing-function: linear;
+	animation: movess 6s infinite; 
+}
+#center img:nth-child(2){
+	width: 132px;
+    right: 2px;
+    top: 30px;
+	animation-timing-function: linear;
+	animation: moves 5s infinite; 
+}
+#center img:nth-child(3){
+    top: 140px;
+    left: 20px;
+	width: 130px;
+	animation-timing-function: linear;
+	animation: moves 7s infinite; 
+}
+#center img:nth-child(4){
+    top: 146px;
+    right: 20px;
+	width: 34px;
+	animation-timing-function: linear;
+	animation: movess 5s infinite; 
+	
+}
+#center img:nth-child(5){
+    top: 279px;
+    left: 15px;
+	width: 130px;
+	animation-timing-function: linear;
+	animation: movesa 5s infinite; 
+}
+#center img:nth-child(6){
+
+    top: 213px;
+    right: 9px;
+	width: 180px;
+	animation-timing-function: linear;
+	animation: movesa 4s infinite; 
+
+}
+#center img:nth-child(7){
+	
+    top: 417px;
+    left: 66px;
+	width: 35px;
+	animation-timing-function: linear;
+	animation: moves 6s infinite; 
+	
+}
+#center img:nth-child(8){
+	
+    top: 345px;
+    right: 19px;
+	width: 130px;
+	animation-timing-function: linear;
+	animation: movesa 6s infinite; 
+	
+}
+#slide{
+	position: absolute;
+    top: 521px;
+    left: 148px;
+    width: 30px;
+    animation: fadeInUp 1s infinite;
+   
+}
+#music{
+	position: absolute;
+    top: 505px;
+    right: 67px;
+}
+#music img:nth-child(1){
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	z-index: 5;
+	animation: music 5s linear infinite;
+}
+#music img:nth-child(2){
+	position: absolute;
+	display: none;
+	z-index: 5;
+}
+@keyframes music{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(1080deg);
+	}
+}
+@keyframes moves{
+	35%{
+		transform: translate3d(-5px,3px,-6px);
+	}
+	
+	65%{
+		transform: translate3d(4px,-4px,4px);
+	}
+}
+@keyframes movesa{
+	35%{
+		transform: translate3d(4px,-5px,4px);
+	}
+	
+	65%{
+		transform: translate3d(-3px,4px,-3px);
+	}
+}
+@keyframes movess{
+	35%{
+		transform: translate3d(5px,4px,-6px);
+	}
+	
+	65%{
+		transform: translate3d(4px,-5px,6px);
+	}
+}

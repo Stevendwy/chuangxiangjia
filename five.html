@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Five</title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/five.css"/>
+		<style type="text/css">
+			   body{
+		        perspective: 1000px;
+		        background: black;
+		        
+		        -webkit-transform-style: preserve-3d;
+		        -moz-transform-style: preserve-3d;
+		        -ms-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+		      }
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="center">
+				<img class="imgfive img_1" src="img/pagefive/bg2.jpg"/>
+				<img class="imgfive img_2" src="img/pagefive/bg.jpg"/>
+				<img class="imgfive img_3 zoomIn" src="img/pagefive/tamen.png"/>
+				<img class="imgfive img_4 flash" src="img/pagefive/tap.png"/>							
+			</div>
+			<div id="center_b">
+				<img class="imgfiveb img_10" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_11" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_12" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_13" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_14" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_15" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_16" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_17" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_18" src="img/pagefive/gy.png"/>
+				<img class="imgfiveb img_19" src="img/pagefive/gy.png"/>	
+			</div>
+			<div id="center_img">
+				<img class="imgfiveimg img_1" src="img/pagefive/1.jpg"/>
+				<img class="imgfiveimg img_2" src="img/pagefive/5.jpg"/>
+				<img class="imgfiveimg img_3" src="img/pagefive/2.jpg"/>
+				<img class="imgfiveimg img_4" src="img/pagefive/4.jpg"/>
+				<img class="imgfiveimg img_5" src="img/pagefive/3.jpg"/>
+				<img class="imgfiveimg img_6" src="img/pagefive/8.jpg"/>
+				<img class="imgfiveimg img_7" src="img/pagefive/6.jpg"/>
+				<img class="imgfiveimg img_8" src="img/pagefive/7.jpg"/>
+				<img class="imgfiveimg img_9" src="img/pagefive/10.jpg"/>
+				<img class="imgfiveimg img_10" src="img/pagefive/9.jpg"/>
+			</div>
+			<div id="center_up">
+				<img class="imgfiveup img_1" src="img/pagefive/01.jpg"/>
+				<img class="imgfiveup img_2" src="img/pagefive/05.jpg"/>
+				<img class="imgfiveup img_3" src="img/pagefive/02.jpg"/>
+				<img class="imgfiveup img_4" src="img/pagefive/04.jpg"/>
+				<img class="imgfiveup img_5" src="img/pagefive/03.jpg"/>
+				<img class="imgfiveup img_6" src="img/pagefive/08.jpg"/>
+				<img class="imgfiveup img_7" src="img/pagefive/06.jpg"/>
+				<img class="imgfiveup img_8" src="img/pagefive/07.jpg"/>
+				<img class="imgfiveup img_9" src="img/pagefive/010.jpg"/>
+				<img class="imgfiveup img_10" src="img/pagefive/09.jpg"/>
+				<img class="imgfiveup img_1" src="img/pagefive/fx.png"/>
+				<h2>Who am I</h2>
+				<p>看大神是怎么炼成的</p>
+			</div>
+			<div id="slide">
+				<img class="fadeInUp" src="img/tong/slide.png"/>
+				<img class="fadeInUp" src="img/tong/slide.png"/>
+			</div>
+			<div id="music">
+				<img id="plays" src="img/tong/music.png"/>
+				<img id="paused" src="img/tong/musicoff.png"/>
+			</div>
+			<audio id="gameMusic" src="musics/Shiftone_0.74.mp3"></audio>
+		</div>
+	</body>
+	<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch-0.2.14.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tong.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">	
+	var slide = document.getElementById("slide"); 
+			touch.on('#all', 'swipeup', function(ev){
+			   window.location.href = "shou.html";
+			});
+			touch.on('#all', 'swipedown', function(ev){
+			   window.location.href = "four.html";
+			});
+			
+			
+	var imgs = $('#center_img .imgfiveimg');
+	var imgb = $('#center_b .imgfiveb');
+	var imgshow = document.getElementsByClassName('imgfiveup');
+
+		window.onload = function (){ 
+				$.each(imgs, function(i,n) {
+					$('#center_img .imgfiveimg:eq(9)').delay(500),
+					$('#center_b .imgfiveb:eq(9)').delay(600),
+					
+					$('#center_img .imgfiveimg:eq(8)').delay(1000),
+					$('#center_b .imgfiveb:eq(9)').delay(1100),
+					
+					$('#center_img .imgfiveimg:eq(7)').delay(1500),
+					$('#center_b .imgfiveb:eq(7)').delay(1600),
+					
+					$('#center_img .imgfiveimg:eq(6)').delay(2000),
+					$('#center_b .imgfiveb:eq(6)').delay(2100),
+					
+					$('#center_img .imgfiveimg:eq(5)').delay(2500),
+					$('#center_b .imgfiveb:eq(5)').delay(2600),
+					
+					$('#center_img .imgfiveimg:eq(4)').delay(3000),
+					$('#center_b .imgfiveb:eq(4)').delay(3100),
+					
+					$('#center_img .imgfiveimg:eq(3)').delay(3500),
+					$('#center_b .imgfiveb:eq(3)').delay(3600),
+					
+					$('#center_img .imgfiveimg:eq(2)').delay(4000),
+					$('#center_b .imgfiveb:eq(2)').delay(4100),
+					
+					$('#center_img .imgfiveimg:eq(1)').delay(4500),
+					$('#center_b .imgfiveb:eq(1)').delay(4600),
+					
+					$('#center_img .imgfiveimg:eq(0)').delay(5000),
+					$('#center_b .imgfiveb:eq(0)').delay(5100),
+					imgs.slideDown(2000),
+					imgb.show(2000),
+//					console.log(imgs.delay(i*100))
+					$("#center .imgfive:eq(3)").delay(6000),
+					$("#center .imgfive:eq(3)").show(2000)
+				});
+//				$('#center_img .imgfiveimg:eq(i)').slideDown(2000);
+//				$('#center_img .imgfiveimg:eq(i)').fadeIn(2000);
+//				$('#center_img .imgfiveimg:eq(i)').show(2000);
+				imgs.click(function  () {
+					var k=0;
+					k = $(this).index(),
+					console.log(k);
+					$("#center_up").show(1000);
+					imgshow[k].style.display = 'inline-block';
+//					imgshow[k].style.zIndex = 11;				
+					$('#all #center_up .imgfiveup:eq(10)').show(1000);
+					$('#all #center_up .imgfiveup:eq(10)').click(function  () {
+					$("#center_up").hide(2000);
+					imgshow[k].style.display = 'none';
+					});
+				});		
+		} 
+	</script>
+</html>
+

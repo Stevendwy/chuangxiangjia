@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Four</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/four.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<style type="text/css">
+			body{
+		        perspective: 1000px;
+		        background: black;
+		        
+		        -webkit-transform-style: preserve-3d;
+		        -moz-transform-style: preserve-3d;
+		        -ms-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+		      }
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<img src="img/pagefours/pointlight.png"/>
+			<img class="img_close" src="img/pagefours/x.png"/>
+			<div id="center">
+				<img class="imgs img_1" src="img/pagefours/liuyong.png"/>
+				<img class="imgs img_2" src="img/pagefours/shenxiaohui.png"/>
+				<img class="imgs img_3" src="img/pagefours/gy2.png"/>
+				<img class="imgs img_4" src="img/pagefours/wxf.png"/>
+				<img class="imgs img_5" src="img/pagefours/wzhuang.png"/>
+				<img class="imgs img_6" src="img/pagefours/wqg.png"/>
+				<img class="imgs img_7" src="img/pagefours/madong.png"/>
+				<!--<img src="img/pagefours/wxf.png"/>-->
+			</div>
+			<div class="swiper-container">				
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        		<img class="imgss img_11" src="img/pagefours/liuniuins.png"/>
+			        </div>
+			        <div class="swiper-slide">
+			        		<img class="imgss img_12" src="img/pagefours/slhins.png"/>
+			        </div>
+			        <div class="swiper-slide">
+			        		<img class="imgss img_13" src="img/pagefours/gyanins.png"/>
+			        </div>
+			        <div class="swiper-slide">
+			        		<img class="imgss img_14" src="img/pagefours/wxfins.png"/>
+			        </div>
+			        <div class="swiper-slide">
+			        		<img class="imgss img_15" src="img/pagefours/wzins.png"/>
+			        </div>
+			        <div class="swiper-slide">
+			        		<img class="imgss img_16" src="img/pagefours/wqigins.png"/>
+			        </div>
+			        <div class="swiper-slide">
+			        		<img class="imgss img_17" src="img/pagefours/madongins.png"/>
+			        </div>
+			    </div>
+			    <!-- 如果需要导航 -->
+			    <div class="swiper-button-prev"></div>
+	    			<div class="swiper-button-next"></div>
+			</div>
+			<div id="shexians">
+				<img src="img/pagefours/CCline.png"/>
+				<img src="img/pagefours/circle-2.png"/>
+				<img class="bounceInLeft" src="img/pagefours/ta.png"/>
+				<img class="bounceInRight" src="img/pagefours/yi.png"/>
+			</div>
+			<div id="dian">
+				<img class=" flash" src="img/pagefours/objct-font.png"/>
+			</div>
+			<div id="slide">
+				<img class="fadeInUp" src="img/tong/slide.png"/>
+				<img class="fadeInUp" src="img/tong/slide.png"/>
+			</div>
+			<div id="music">
+				<img id="plays" src="img/tong/music.png"/>
+				<img id="paused" src="img/tong/musicoff.png"/>
+			</div>
+			<audio id="gameMusic" src="musics/Shiftone_0.74.mp3"></audio>
+		</div>
+	</body>
+	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch-0.2.14.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tong.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var slide = document.getElementById("slide"); 
+			touch.on('#all', 'swipeup', function(ev){
+			   window.location.href = "five.html";
+			});
+			touch.on('#all', 'swipedown', function(ev){
+			   window.location.href = "third.html";
+			});
+		window.onload = function (){
+		var imgmove = $("#center .imgs");
+		var imgs = document.getElementsByClassName("swiper-wrapper");
+		var imgshow = imgs[0].getElementsByClassName("swiper-slide");
+		var imgshows = document.querySelectorAll(".swiper-slide img");
+		var mySwiper = new Swiper ('.swiper-container', {
+//		    direction: 'vertical',
+		    loop: true,		    
+		    // 如果需要前进后退按钮
+		    nextButton: '.swiper-button-next',
+		    prevButton: '.swiper-button-prev',
+		  }); 
+		  $.each(imgmove, function(i,v){
+		  	 imgmove.click(function (){
+		  		 	var k=0;
+		  		 	k = $(this).index(),
+		  		 	console.log(k);
+		  		 	//人物消失
+		  		 	imgmove.hide(1000),
+		  		 	//文字消失
+		  		 	$('#shexians img:eq(2)').hide(1000),
+		  		 	$('#shexians img:eq(3)').hide(1000),
+		  		 	//点击图消失
+		  		 	$("#dian img").hide(1000),
+		  		 	//出现轮播
+
+					$(".swiper-container").css("zIndex",3);
+					$(".swiper-container").show(1000);
+					$("#all img").eq(1).show(1000);
+
+					imgs[0].style.transform = "translate3d("+(-320*(k+1))+"px,0px,0px)";
+					//点击大图消失，小图出现
+					$("#all img").eq(1).click(function  () {
+					imgmove.show(1000),
+					$(".swiper-container").hide(1000);
+					$("#all img").eq(1).hide(1000);
+					});
+		  		 });
+		 	 });	
+		 } 
+	</script>
+</html>

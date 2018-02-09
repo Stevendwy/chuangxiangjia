@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Third</title>
+		<link rel="stylesheet" type="text/css" href="css/third.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<style type="text/css">
+			body{
+		        perspective: 1000px;
+		        background: black;
+		        
+		        -webkit-transform-style: preserve-3d;
+		        -moz-transform-style: preserve-3d;
+		        -ms-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+		      }
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="center">
+				<img class="img img_1" src="img/pagefour/img5.png"/>
+				<img class="img img_2" src="img/pagefour/img-5.png"/>
+				<img class="img img_3" src="img/pagefour/group4.png"/>
+				<img class="img img_4" src="img/pagefour/img3.png"/>
+				<img class="img img_5" src="img/pagefour/group2.png"/>
+				<img class="img img_6" src="img/pagefour/grounp4.png"/>
+				<img class="img img_7" src="img/pagefour/img4.png"/>
+				<img class="img img_8" src="img/pagefour/group1.png"/>
+			</div>	
+			<div id="slide">
+				<img class="fadeInUp" src="img/tong/slide.png"/>
+				<img class="fadeInUp" src="img/tong/slide.png"/>
+			</div>
+			<div id="music">
+				<img id="plays" src="img/tong/music.png"/>
+				<img id="paused" src="img/tong/musicoff.png"/>
+			</div>
+			<audio id="gameMusic" src="musics/Shiftone_0.74.mp3"></audio>
+		</div>
+	</body>
+		<script src="js/touch-0.2.14.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tong.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var slide = document.getElementById("slide"); 
+			touch.on('#all', 'swipeup', function(ev){
+			   window.location.href = "four.html";
+			});
+			touch.on('#all', 'swipedown', function(ev){
+			   window.location.href = "two.html";
+			});
+		</script>
+</html>
